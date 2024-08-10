@@ -11,7 +11,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-cg6*%6d51ef8f#4!r3*$vmxm4)
 
 DEBUG = os.getenv('DEBUG', False)
 
-ALLOWED_HOSTS = ['fish-dieta.zapto.org', '158.160.76.54', 'localhost']
+ALLOWED_HOSTS = os.getenv('HOSTS', os.getenv('HOSTS').split(';'))
 
 INSTALLED_APPS = [
     'django.contrib.admin',
